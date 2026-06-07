@@ -1,43 +1,63 @@
-# Arcanum-Files
-ARCANUMLAND TOOLKIT
+# ArcanumLand Friends Toolkit
 
-Run INSTALL.bat and choose:
+An installer for running ArcanumLand without its locked server-only menu and
+for hosting a compatible private Forge server.
 
-1. Client Freedom Patch
-   - Enables Minecraft's normal Singleplayer and Multiplayer menus.
-   - Disables FancyMenu, Drippy Loading Screen, SpiffyHUD, Spiffy x Gnetum,
-     and the remote BetterNews feed.
-   - Backs up the bundled server list instead of deleting it permanently.
-   - Installs the recovered questbook, artwork, and supporting assets.
+## Download
 
-2. Recovered dedicated server
-   - Extracts the current Forge 1.20.1 / 47.4.13 server.
-   - Works with an original, unmodified ArcanumLand client.
-   - Includes the recovered questbook and matching server configuration.
-   - Does not include a world, player records, logs, or credentials.
+Download `ArcanumLand-Friends-Toolkit-1.2.zip` from the repository's
+[Releases](https://github.com/Damply/Arcanum-Files/releases) page.
 
-3. Both
-   - Applies the optional Client Freedom Patch and installs the server.
+Do not use GitHub's automatically generated "Source code" archives as the
+installer. They do not contain the large server and client payloads.
 
-4. Questbook and artwork only
-   - Adds the recovered quest content without changing the original UI.
+SHA-256:
 
-5. Restore newest client backup
-   - Reverses the newest toolkit client installation.
+```text
+71DDFEF7592ED982D4621844CEAECDEC092747743C66007A413CE225CABF0D8B
+```
 
-6. Check client setup
-   - Reports quest files, textures, backups, and restrictive UI mods.
+Extract the downloaded ZIP, then run `INSTALL.bat`.
 
-BACKUPS
+## Installer Options
 
-Every client operation creates a timestamped folder inside the instance:
+1. **Client Freedom Patch**: enables Singleplayer and removes the restrictive
+   custom menu, loading screen, HUD integration, and remote news feed.
+2. **Recovered Dedicated Server**: installs the Forge 1.20.1 / 47.4.13 server.
+   An original, unmodified ArcanumLand client can connect.
+3. **Both**: installs the optional client patch and recovered server.
+4. **Questbook and Artwork Only**: installs recovered quest content without
+   changing the original menu.
+5. **Restore Newest Client Backup**: reverses the latest toolkit client change.
+6. **Check Client Setup**: reports detected UI mods, quests, textures, and
+   backups.
 
+Client changes are optional for connecting to the recovered server.
+
+## Backups
+
+Every client operation creates a timestamped backup inside the Minecraft
+instance:
+
+```text
 _arcanumland_friends_backup_YYYYMMDD-HHMMSSmmm
+```
 
-The restore option keeps restored backups and marks them with "_restored".
-gnetum-2.4.3.jar remains installed because the pack uses it independently.
+The restore option retains the restored backup and marks it with `_restored`.
 
-SERVER FIRST START
+## Server Setup
 
-Read README-SERVER.txt, install Java 17, accept the Minecraft EULA in
-eula.txt, then run start-server.bat.
+Install Java 17, read `README-SERVER.txt`, accept the Minecraft EULA by setting
+`eula=true` in `eula.txt`, then run `start-server.bat`.
+
+The server bundle contains no world, player records, logs, or credentials.
+
+## Repository Contents
+
+This repository tracks the PowerShell installer and documentation. The complete
+payload is distributed as a GitHub Release asset because normal Git repositories
+do not support files of this size.
+
+This is an independent community interoperability and preservation project. It
+is not affiliated with Mojang, Microsoft, CurseForge, or the original modpack
+authors.

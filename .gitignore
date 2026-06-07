@@ -1,0 +1,8 @@
+# Complete payloads are distributed through GitHub Releases.
+Server/
+Client-Payload/
+*.zip
+
+# Local test output and backups.
+_installer-test/
+_arcanumland_friends_backup_*/
